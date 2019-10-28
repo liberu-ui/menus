@@ -15,12 +15,9 @@ For live examples and demos, you may visit [laravel-enso.com](https://www.larave
 
 Check the full documentation at  [docs.laravel-enso.com](https://docs.laravel-enso.com).
 
-### Installation
+### Installation, Configuration & Usage
 
-Install the package:
-```
-yarn add @enso-ui/menus
-```
+Be sure to check out the full documentation for this package available at [docs.laravel-enso.com](https://docs.laravel-enso.com/frontend/menus.html)
 
 ## Contributions
 
