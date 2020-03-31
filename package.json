@@ -1,6 +1,6 @@
 {
   "name": "@enso-ui/menus",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "description": "Basic menus package",
   "main": "src/bulma/pages/menus/Index.vue",
   "scripts": {
