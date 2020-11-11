@@ -23,7 +23,7 @@
   "dependencies": {
     "@enso-ui/forms": "^2.0",
     "@enso-ui/tables": "^2.0",
-    "@enso-ui/ui": "^3.0",
+    "@enso-ui/ui": "^4.0",
     "vue": "^2.5.16"
   },
   "devDependencies": {
