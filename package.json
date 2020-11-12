@@ -21,8 +21,12 @@
   },
   "homepage": "https://github.com/enso-ui/menus#readme",
   "dependencies": {
+    "@enso-ui/dropdown-indicator": "^1.0",
     "@enso-ui/forms": "^2.0",
+    "@enso-ui/switch": "^1.0",
     "@enso-ui/tables": "^2.0",
+    "@enso-ui/themes": "^1.0",
+    "@enso-ui/transitions": "^1.0",
     "@enso-ui/ui": "^4.0",
     "vue": "^2.5.16"
   },
