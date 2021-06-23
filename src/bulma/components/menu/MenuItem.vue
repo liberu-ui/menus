@@ -2,7 +2,7 @@
     <core-menu-item v-bind="$attrs"
         v-on="$listeners">
         <template v-slot:default="{ menu, editable, expandedSidebar, hasActiveChild, menuEvents }">
-            <div class="menu-item has-vertically-centered-content"
+            <div class="menu-item is-flex is-align-items-center"
                 v-on="menuEvents"
                 @mouseenter="dropdown = true"
                 @mouseleave="dropdown = false">
@@ -18,7 +18,7 @@
                 </div>
                 <zoom>
                     <div v-if="expandedSidebar"
-                        class="has-margin-left-medium menu-hiding-label"
+                        class="ml-2 menu-hiding-label"
                         :class="[
                             { 'is-bold': menu.active },
                             { 'is-opaque': !menu.active && !hasActiveChild }
