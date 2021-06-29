@@ -11,7 +11,7 @@
                             @click="$router.push({
                                 name: 'system.roles.configure',
                                 params: { role: $refs.form.routeParam('role') }
-                            })">
+                            }).catch(routerErrorHandler)">
                             <span class="is-hidden-mobile">
                                 {{ i18n('Configure') }}
                             </span>
@@ -49,7 +49,7 @@ library.add([faSave, faSlidersH]);
 export default {
     name: 'Edit',
 
-    inject: ['errorHandler', 'i18n', 'route', 'toastr'],
+    inject: ['errorHandler', 'i18n', 'route', 'routerErrorHandler', 'toastr'],
 
     components: { EnsoForm },
 

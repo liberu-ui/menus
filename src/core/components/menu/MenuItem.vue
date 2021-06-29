@@ -6,6 +6,8 @@ import {
 export default {
     name: 'MenuItem',
 
+    inject: ['routerErrorHandler'],
+
     props: {
         menu: {
             type: Object,
@@ -24,12 +26,12 @@ export default {
         },
         matchesName() {
             return this.$route.matched
-                .map(matchedRoute => matchedRoute.name)
+                .map((matchedRoute) => matchedRoute.name)
                 .includes(this.menu.route);
         },
         matchesPath() {
             return this.$route.matched
-                .map(matchedRoute => matchedRoute.path)
+                .map((matchedRoute) => matchedRoute.path)
                 .includes(this.path);
         },
         path() {
@@ -61,9 +63,8 @@ export default {
                 return;
             }
 
-            if (this.$route.name !== this.menu.route) {
-                this.$router.push({ name: this.menu.route });
-            }
+            this.$router.push({ name: this.menu.route })
+                .catch(this.routerErrorHandler);
 
             if (this.isTouch) {
                 this.hide();
