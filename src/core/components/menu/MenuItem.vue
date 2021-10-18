@@ -35,7 +35,8 @@ export default {
                 .includes(this.path);
         },
         path() {
-            return `/${this.menu.route.split('.').slice(0, -1).join('/')}`;
+            const components = this.menu.route.split('.');
+            return `/${components.slice(0, components.length).join('/')}`;
         },
     },
 
