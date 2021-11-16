@@ -45,6 +45,7 @@
 </template>
 
 <script>
+import { FontAwesomeIcon as Fa } from '@fortawesome/vue-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faGripLines } from '@fortawesome/free-solid-svg-icons';
 import { Zoom } from '@enso-ui/transitions';
@@ -56,7 +57,7 @@ library.add(faGripLines);
 export default {
     name: 'MenuItem',
 
-    components: { Zoom, CoreMenuItem, DropdownIndicator },
+    components: { CoreMenuItem, DropdownIndicator, Fa, Zoom },
 
     inject: ['i18n'],
 
