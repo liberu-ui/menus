@@ -73,7 +73,7 @@ export default {
     },
 
     render() {
-        return this.$scopedSlots.default({
+        return this.$slots.default({
             menu: this.menu,
             editable: this.editable,
             expandedSidebar: this.isExpanded,

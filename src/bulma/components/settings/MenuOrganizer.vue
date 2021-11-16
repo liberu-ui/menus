@@ -1,6 +1,6 @@
 <template>
     <core-menu-organizer>
-        <template #:default="{ bindings, events }">
+        <template #default="{ bindings, events }">
             <div class="level is-mobile"
                 v-if="canAccess('system.menus.organize')">
                 <div class="level-left">

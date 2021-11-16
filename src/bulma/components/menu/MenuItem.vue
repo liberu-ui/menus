@@ -1,7 +1,6 @@
 <template>
-    <core-menu-item v-bind="$attrs"
-        v-on="$listeners">
-        <template #:default="{ menu, editable, expandedSidebar, hasActiveChild, menuEvents }">
+    <core-menu-item v-bind="$attrs">
+        <template #default="{ menu, editable, expandedSidebar, hasActiveChild, menuEvents }">
             <div class="menu-item is-flex is-align-items-center"
                 v-on="menuEvents"
                 @mouseenter="dropdown = true"

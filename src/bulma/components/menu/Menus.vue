@@ -1,7 +1,6 @@
 <template>
-    <core-menus v-bind="$attrs"
-        v-on="$listeners">
-        <template #:default="{ menus, isActive, parentMenuEvents, organizeBindings, organizeEvents }">
+    <core-menus v-bind="$attrs">
+        <template #default="{ menus, isActive, parentMenuEvents, organizeBindings, organizeEvents }">
             <ul class="menu-list">
                 <draggable v-bind="organizeBindings"
                     handle=".handle"
