@@ -71,14 +71,14 @@ export default {
 
     render() {
         return this.$slots.default({
-            menus: this.menus,
             parentMenuEvents: {
                 shrink: this.shrink,
                 extend: this.extend,
             },
             organizeBindings: {
-                value: this.menus,
+                modelValue: this.menus,
                 disabled: this.disabled,
+                itemKey: 'name',
             },
             organizeEvents: {
                 input: this.organize,
