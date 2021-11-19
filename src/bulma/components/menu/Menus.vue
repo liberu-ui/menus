@@ -1,7 +1,8 @@
 <template>
     <core-menus v-bind="$attrs">
-        <template #default="{ parentMenuEvents, organizeBindings, organizeEvents }">
-            <ul class="menu-list">
+        <template #default="{ parentMenuEvents, organizeBindings, organizeEvents, ref }">
+            <ul class="menu-list"
+                :ref="ref">
                 <draggable v-bind="organizeBindings"
                     handle=".handle"
                     tag="transition-group"
