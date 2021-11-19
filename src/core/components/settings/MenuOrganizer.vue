@@ -15,10 +15,10 @@ export default {
     render() {
         return this.$slots.default({
             bindings: {
-                value: this.editable,
+                modelValue: this.editable,
             },
             events: {
-                input: this.edit,
+                'update:modelValue': this.edit,
             },
         });
     },
