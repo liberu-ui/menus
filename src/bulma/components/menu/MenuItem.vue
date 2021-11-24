@@ -15,13 +15,13 @@
                         :icon="menu.icon"
                         v-else/>
                 </div>
-                <zoom>
-                    <div v-if="expandedSidebar"
-                        class="ml-2 menu-hiding-label"
+                <zoom :duration="300">
+                    <div class="ml-2 menu-hiding-label"
                         :class="[
                             { 'is-bold': menu.active },
                             { 'is-opaque': !menu.active && !hasActiveChild }
-                        ]">
+                        ]"
+                        v-if="expandedSidebar">
                         {{ i18n(menu.name) }}
                     </div>
                 </zoom>
@@ -89,7 +89,7 @@ export default {
 <style lang="scss">
     @import '@enso-ui/themes/bulma/variables';
 
-    .enso-menu {
+    .menu-list {
         .menu-item {
 
             .is-opaque {

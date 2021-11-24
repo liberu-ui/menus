@@ -17,6 +17,8 @@ export default {
         },
     },
 
+    emits: ['shrink', 'extend'],
+
     data: () => ({
         ref: 'menu',
     }),
