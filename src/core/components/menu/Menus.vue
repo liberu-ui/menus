@@ -91,7 +91,7 @@ export default {
                 itemKey: 'name',
             },
             organizeEvents: {
-                input: this.organize,
+                'update:modelValue': this.organize,
                 end: this.persist,
             },
         });
