@@ -1,23 +1,23 @@
 <template>
-    <core-menu-organizer>
-        <template #default="{ bindings, events }">
-            <div class="level is-mobile"
-                v-if="canAccess('system.menus.organize')">
-                <div class="level-left">
-                    <div class="level-item">
-                        {{ i18n('Organize Menus') }}
-                    </div>
-                </div>
-                <div class="level-right">
-                    <div class="level-item">
+    <div class="level is-mobile"
+        v-if="canAccess('system.menus.organize')">
+        <div class="level-left">
+            <div class="level-item">
+                {{ i18n('Organize Menus') }}
+            </div>
+        </div>
+        <div class="level-right">
+            <div class="level-item">
+                <core-menu-organizer>
+                    <template #default="{ bindings, events }">
                         <vue-switch class="is-medium"
                             v-bind="bindings"
                             v-on="events"/>
-                    </div>
-                </div>
+                    </template>
+                </core-menu-organizer>
             </div>
-        </template>
-    </core-menu-organizer>
+        </div>
+    </div>
 </template>
 
 <script>
