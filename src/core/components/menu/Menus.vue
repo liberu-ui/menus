@@ -4,7 +4,7 @@ import { mapState, mapMutations } from 'vuex';
 export default {
     name: 'Menus',
 
-    inject: ['errorHandler', 'route'],
+    inject: ['errorHandler', 'http', 'route'],
 
     props: {
         menus: {
@@ -73,7 +73,7 @@ export default {
             this.$emit('extend', this.el.scrollHeight);
         },
         persist() {
-            axios.put(this.route('system.menus.organize'), { menus: this.menus })
+            this.http.put(this.route('system.menus.organize'), { menus: this.menus })
                 .catch(this.errorHandler);
         },
     },
