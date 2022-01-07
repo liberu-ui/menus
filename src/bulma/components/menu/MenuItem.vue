@@ -1,5 +1,5 @@
 <template>
-    <core-menu-item v-bind="$attrs">
+    <core-menu-item>
         <template #default="{ menu, editable, expandedSidebar, hasActiveChild, menuEvents }">
             <div class="menu-item is-flex is-align-items-center"
                 v-on="menuEvents"

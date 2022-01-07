@@ -1,5 +1,5 @@
 <template>
-    <core-menus v-bind="$attrs">
+    <core-menus>
         <template #default="{ parentMenuEvents, organizeBindings, organizeEvents, ref }">
             <ul class="menu-list"
                 :ref="ref">
