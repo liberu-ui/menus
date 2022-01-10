@@ -26,12 +26,12 @@ export default {
         },
         matchesName() {
             return this.$route.matched
-                .map((matchedRoute) => matchedRoute.name)
+                .map(matchedRoute => matchedRoute.name)
                 .includes(this.menu.route);
         },
         matchesPath() {
             return this.$route.matched
-                .map((matchedRoute) => matchedRoute.path)
+                .map(matchedRoute => matchedRoute.path)
                 .includes(this.path);
         },
         path() {

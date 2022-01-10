@@ -57,7 +57,9 @@ library.add(faGripLines);
 export default {
     name: 'MenuItem',
 
-    components: { CoreMenuItem, DropdownIndicator, Fa, Zoom },
+    components: {
+        CoreMenuItem, DropdownIndicator, Fa, Zoom,
+    },
 
     inject: ['i18n'],
 
