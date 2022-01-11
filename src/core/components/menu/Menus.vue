@@ -6,6 +6,8 @@ export default {
 
     inject: ['errorHandler', 'http', 'route'],
 
+    inheritAttrs: false,
+
     props: {
         menus: {
             type: Array,
