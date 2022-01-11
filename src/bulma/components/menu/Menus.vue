@@ -1,21 +1,22 @@
 <template>
-    <core-menus v-bind="$attrs"
-        v-on="$listeners">
-        <template v-slot:default="{ menus, isActive, parentMenuEvents, organizeBindings, organizeEvents }">
-            <ul class="menu-list">
+    <core-menus>
+        <template #default="{ parentMenuEvents, organizeBindings, organizeEvents, ref }">
+            <ul class="menu-list"
+                :ref="ref">
                 <draggable v-bind="organizeBindings"
                     handle=".handle"
+                    tag="transition-group"
+                    :component-data="{ name: 'menu-list' }"
                     v-on="organizeEvents">
-                    <transition-group name="menu-list">
-                        <li v-for="menu in menus"
-                            :key="menu.name">
-                            <menu-item :menu="menu"/>
-                            <menus :menus="menu.children"
-                                :collapsed="!menu.expanded"
+                    <template #item="{ element }">
+                        <li>
+                            <menu-item :menu="element"/>
+                            <menus :menus="element.children"
+                                :collapsed="!element.expanded"
                                 v-on="parentMenuEvents"
-                                v-if="menu.children"/>
+                                v-if="element.children"/>
                         </li>
-                    </transition-group>
+                    </template>
                 </draggable>
             </ul>
         </template>

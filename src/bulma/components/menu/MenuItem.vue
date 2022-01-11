@@ -1,7 +1,6 @@
 <template>
-    <core-menu-item v-bind="$attrs"
-        v-on="$listeners">
-        <template v-slot:default="{ menu, editable, expandedSidebar, hasActiveChild, menuEvents }">
+    <core-menu-item>
+        <template #default="{ menu, editable, expandedSidebar, hasActiveChild, menuEvents }">
             <div class="menu-item is-flex is-align-items-center"
                 v-on="menuEvents"
                 @mouseenter="dropdown = true"
@@ -16,13 +15,13 @@
                         :icon="menu.icon"
                         v-else/>
                 </div>
-                <zoom>
-                    <div v-if="expandedSidebar"
-                        class="ml-2 menu-hiding-label"
+                <zoom :duration="300">
+                    <div class="ml-2 menu-hiding-label"
                         :class="[
                             { 'is-bold': menu.active },
                             { 'is-opaque': !menu.active && !hasActiveChild }
-                        ]">
+                        ]"
+                        v-if="expandedSidebar">
                         {{ i18n(menu.name) }}
                     </div>
                 </zoom>
@@ -46,6 +45,7 @@
 </template>
 
 <script>
+import { FontAwesomeIcon as Fa } from '@fortawesome/vue-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faGripLines } from '@fortawesome/free-solid-svg-icons';
 import { Zoom } from '@enso-ui/transitions';
@@ -57,7 +57,9 @@ library.add(faGripLines);
 export default {
     name: 'MenuItem',
 
-    components: { Zoom, CoreMenuItem, DropdownIndicator },
+    components: {
+        CoreMenuItem, DropdownIndicator, Fa, Zoom,
+    },
 
     inject: ['i18n'],
 
@@ -89,7 +91,7 @@ export default {
 <style lang="scss">
     @import '@enso-ui/themes/bulma/variables';
 
-    .enso-menu {
+    .menu-list {
         .menu-item {
 
             .is-opaque {
