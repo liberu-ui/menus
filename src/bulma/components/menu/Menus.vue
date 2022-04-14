@@ -5,7 +5,6 @@
                 :ref="ref">
                 <draggable v-bind="organizeBindings"
                     handle=".handle"
-                    tag="transition-group"
                     :component-data="{ name: 'menu-list' }"
                     v-on="organizeEvents">
                     <template #item="{ element }">
@@ -52,9 +51,5 @@ export default {
                 padding-right: 0;
             }
         }
-    }
-
-    .menu-list-move {
-        transition: transform 0.5s;
     }
 </style>
