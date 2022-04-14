@@ -5,7 +5,6 @@
                 :ref="ref">
                 <draggable v-bind="organizeBindings"
                     handle=".handle"
-                    :component-data="{ name: 'menu-list' }"
                     v-on="organizeEvents">
                     <template #item="{ element }">
                         <li>
