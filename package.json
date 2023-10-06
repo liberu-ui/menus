@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/enso-ui/menus.git"
+    "url": "git+https://github.com/liberu-ui/menus.git"
   },
   "keywords": [
     "menus",
@@ -17,9 +17,9 @@
   "author": "Adrian Ocneanu <aocneanu@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/enso-ui/menus/issues"
+    "url": "https://github.com/liberu-ui/menus/issues"
   },
-  "homepage": "https://github.com/enso-ui/menus#readme",
+  "homepage": "https://github.com/liberu-ui/menus#readme",
   "dependencies": {
     "@liberu-ui/dropdown-indicator": "^2.0",
     "@liberu-ui/forms": "^3.0",

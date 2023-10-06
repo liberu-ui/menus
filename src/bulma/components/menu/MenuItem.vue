@@ -48,8 +48,8 @@
 import { FontAwesomeIcon as Fa } from '@fortawesome/vue-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faGripLines } from '@fortawesome/free-solid-svg-icons';
-import { Zoom } from '@enso-ui/transitions';
-import DropdownIndicator from '@enso-ui/dropdown-indicator';
+import { Zoom } from '@liberu-ui/transitions';
+import DropdownIndicator from '@liberu-ui/dropdown-indicator';
 import CoreMenuItem from '../../../core/components/menu/MenuItem.vue';
 
 library.add(faGripLines);
@@ -89,7 +89,7 @@ export default {
 </script>
 
 <style lang="scss">
-    @import '@enso-ui/themes/bulma/variables';
+    @import '@liberu-ui/themes/bulma/variables';
 
     .menu-list {
         .menu-item {

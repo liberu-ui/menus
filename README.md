@@ -1,10 +1,10 @@
 # Menus
 
-![npm license](https://img.shields.io/npm/l/@enso-ui/menus.svg) 
-![npm download](https://img.shields.io/npm/dm/@enso-ui/menus.svg) 
-![GitHub top language](https://img.shields.io/github/languages/top/enso-ui/menus.svg) 
-![GitHub issues](https://img.shields.io/github/issues/enso-ui/menus.svg) 
-![npm version](https://img.shields.io/npm/v/@enso-ui/menus.svg) 
+![npm license](https://img.shields.io/npm/l/@liberu-ui/menus.svg) 
+![npm download](https://img.shields.io/npm/dm/@liberu-ui/menus.svg) 
+![GitHub top language](https://img.shields.io/github/languages/top/liberu-ui/menus.svg) 
+![GitHub issues](https://img.shields.io/github/issues/liberu-ui/menus.svg) 
+![npm version](https://img.shields.io/npm/v/@liberu-ui/menus.svg) 
 
 ## Usage
 The component cannot be used outside of the Liberu ecosystem.
